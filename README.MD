@@ -1,0 +1,2 @@
+## Programa de votaciones
+Con este programa realizado con JavaScript y html se puede calcular el total de curules que puede tener algun partido politico basado en la formula estandar para usada en Colombia
