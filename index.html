@@ -20,7 +20,8 @@
         <button onclick="calcCifraRepartidora()" class="btn btn-primary">Calcular Curules</button>
     </div>
 
-    <div class="resultado d-flex justify-content-center align-items-center" style="min-height: 80vh;" id="resultado">
+    <div class="resultado d-flex flex-column justify-content-center align-items-center" style="min-height: 80vh;" id="resultado">
+        
         <div class="table w-50">
             <table id="table" class="table table-striped text-center" style="width:100%">
                 <thead>
@@ -39,6 +40,8 @@
                 </thead>
             </table>
         </div>
+
+        <div class="datos"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

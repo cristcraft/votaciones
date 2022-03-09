@@ -27,7 +27,9 @@ function calcUmbral(){
     totalVotosValidos = votosValidos / totalCurules;
 
     umbral = totalVotosValidos / 2;
-    console.log(umbral) 
+    localStorage.setItem('umbral', umbral);
+    localStorage.setItem('curules', totalCurules);
+    console.log(umbral)
 }
 
 function calcCifraRepartidora(){
@@ -47,6 +49,7 @@ function calcCifraRepartidora(){
     console.log(curules)
     let resultado = JSON.stringify(curules);
     localStorage.setItem('resultado', resultado);
+    localStorage.setItem('cifraRepartidora',cifraRepartidora);
     location.reload()
 
     console.log(cifraRepartidora)
