@@ -4,7 +4,7 @@ let listaVotos = [];
 let curules = [];
 let totalCurules;
 
-/*let listaPartidos = [
+let listaPartidos = [
     'Partido de la U',
     'Cambio Radical',
     'Partido Liberal',
@@ -15,7 +15,7 @@ let totalCurules;
     'Pacto Historico Y verde',
     'Partido ASI',
     'Salvacion Nacional'
-]*/
+]
 
 function calcUmbral(){
     listaPartidoFinal = [];
@@ -59,21 +59,21 @@ function filtrarUmbral(){
     let nombreYvotosPartidos = [];
 
     //Codigo para cuando la lista de los partidos no este quemada
-    let listaPartidos = prompt('Escribre la el total de partidos que hay');
+    /*let listaPartidos = prompt('Escribre la el total de partidos que hay');
     for (let i = 0; i < listaPartidos; i++) {
         let nombrePartido = prompt('Escribe el nombre del partido n°' + (i+1));
         let votos = prompt('Escribe el total de votos que tiene el partido n°' + nombrePartido);
         votos = parseInt(votos);
 
         nombreYvotosPartidos.push({nombrePartido: nombrePartido, votosTotales : votos})
-    }
+    }*/
 
-    /*for (let i = 0; i < listaPartidos.length; i++) {
+    for (let i = 0; i < listaPartidos.length; i++) {
         let votos = prompt('Escribe el total de votos que tiene el partido ' + listaPartidos[i]);
         votos = parseInt(votos);
 
         nombreYvotosPartidos.push({nombrePartido: listaPartidos[i], votosTotales : votos})
-    }*/
+    }
 
     nombreYvotosPartidos.forEach(partido => {
         if(partido.votosTotales >= umbral){
