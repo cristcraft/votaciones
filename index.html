@@ -17,7 +17,7 @@
 
     <div class="btn d-flex justify-content-evenly m-4">
         <button onclick="calcUmbral()" class="btn btn-primary">Calcular Ubral</button>
-        <button onclick="calcCifraRepartidora()" class="btn btn-primary">Calcular Curules</button>
+        <button onclick="calcCifraRepartidora()" class="btn btn-primary" id="btnCalCurules" disabled>Calcular Curules</button>
     </div>
 
     <div class="resultado d-flex flex-column justify-content-center align-items-center" style="min-height: 80vh;" id="resultado">
@@ -42,6 +42,9 @@
         </div>
 
         <div class="datos"></div>
+        <div class="partidos">
+            <div class="btn btn-primary" id="btnPartidos" onclick="pintarPartidos()">Mostrar lista de partidos</div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

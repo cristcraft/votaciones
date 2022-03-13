@@ -1,3 +1,6 @@
+let btnCalCurules = document.querySelector('#btnCalCurules');
+let btnPartidos = document.querySelector('#btnPartidos')
+let divPartidos = document.querySelector('.partidos');
 let umbral;
 let listaPartidoFinal = [];
 let listaVotos = [];
@@ -5,16 +8,16 @@ let curules = [];
 let totalCurules;
 
 let listaPartidos = [
-    'Partido de la U',
-    'Cambio Radical',
-    'Partido Liberal',
-    'Partido Conservador',
-    'Centro Democratico',
-    'Partido mira',
-    'Centro Esperanza',
-    'Pacto Historico Y verde',
-    'Partido ASI',
-    'Salvacion Nacional'
+    'PARTIDO DE LA U',
+    'CAMBIO RADICAL',
+    'PARTIDO LIBERAL',
+    'PARTIDO CONSERVADOR',
+    'PACTO HISTÓRICO ALIANZA VERDE',
+    'COALICIÓN CENTRO ESPERANZA',
+    'CENTRO DEMOCRATICO',
+    'PARTIDO "ASI"',
+    'PARTIDO MIRA',
+    'MOVIMIENTO DE SALVACION NACIONAL'
 ]
 
 function calcUmbral(){
@@ -30,6 +33,7 @@ function calcUmbral(){
     localStorage.setItem('umbral', umbral);
     localStorage.setItem('curules', totalCurules);
     console.log(umbral)
+    btnCalCurules.disabled = false;
 }
 
 function calcCifraRepartidora(){
@@ -64,7 +68,6 @@ function filtrarUmbral(){
         let nombrePartido = prompt('Escribe el nombre del partido n°' + (i+1));
         let votos = prompt('Escribe el total de votos que tiene el partido n°' + nombrePartido);
         votos = parseInt(votos);
-
         nombreYvotosPartidos.push({nombrePartido: nombrePartido, votosTotales : votos})
     }*/
 
@@ -112,4 +115,16 @@ function totalCurulesPartido(cifraRepartidora){
         let curul = partido.votosTotales / cifraRepartidora;
         curules.push({datos: partido, curules : curul})
     });
+}
+
+function pintarPartidos(){
+    btnPartidos.classList.add('disabled')
+    let lista = document.createElement('ol');
+    listaPartidos.forEach(partido =>(
+        lista.innerHTML +=  `<li>${partido}</li>`
+    ))
+
+    divPartidos.append(lista)
+    console.log(btnPartidos)
+    
 }
